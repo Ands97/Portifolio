@@ -1,30 +1,6 @@
-import { useReducer } from "react"
-
-const initialState = {
-    count: 0
-}
-
-const reducer = (state, action)=>{
-    switch(action.type){
-        case 'increment':
-            return {...state, count: state.count + 1}
-        break;
-        case 'decrement':
-            return {...state, count: state.count - 1}
-        break;
-        case 'double':
-            return {...state, count: state.count * 2}
-        break;
-        case 'zero':
-            return {...state, count: 0}
-        break;
-    }
-
-    return state;
-}
-
+import { useStateValue } from "../contexts/stateContext";
 export default ()=>{
-    const [state, dispatch] = useReducer(reducer, initialState)
+    const [state, dispatch] = useStateValue()
     return(
         <div>
             <button onClick={()=>dispatch({type:'increment'})}>+</button>
