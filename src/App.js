@@ -4,9 +4,8 @@ import { StateProvider } from './contexts/stateContext'
 
 
 import Header from './components/Header';
-import Menu from './components/Menu';
 import Body from './components/Body';
-
+import Footer from './components/Footer';
 
 const App = () => {
     
@@ -15,9 +14,11 @@ const App = () => {
             <div className="container">
                 <Header />
                 <section>
-                    <Menu />
                     <Body />
                 </section>
+                <footer>
+                    <Footer></Footer>
+                </footer>
             </div>
         </StateProvider>
     );
