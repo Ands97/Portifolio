@@ -1,5 +1,8 @@
 export default ()=>{
     return (
-        <div></div>
+        <div className='footer'>
+            <p>Todos os direiros reservados.</p>
+            <p>Powered by: Anderson Afonso</p>
+        </div>
     )
 }
