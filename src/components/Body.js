@@ -16,7 +16,7 @@ import { FaWhatsapp, FaInstagram, FaGithub } from "react-icons/fa";
 
 
 export default () => {
-    const [option1, setOption1] = useState('')
+    const [option1, setOption1] = useState('selected')
     const [option2, setOption2] = useState('')
     const [option3, setOption3] = useState('')
     const [option4, setOption4] = useState('')
