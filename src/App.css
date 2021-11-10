@@ -243,6 +243,9 @@ a{
   .me{
     margin-left: 50px
   }
+  .imgProjects{
+    width: auto;
+  }
   .optionsProject p{
     margin: auto 20px auto 20px;
   }
