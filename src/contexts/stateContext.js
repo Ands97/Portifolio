@@ -1,19 +1,17 @@
 import { createContext, useContext, useReducer, useEffect } from 'react';
+import ScrollReducer from '../reducers/ScrollReducer';
 
-import ThemeReducer from '../reducers/ThemeReducer';
-import UserReducer from '../reducers/UserReducer';
-import Counter from '../reducers/Counter';
 
 const initialState = {
-    theme: ThemeReducer(),
-    user: UserReducer(),
-    count: Counter()
+    
+    scroll: ScrollReducer()
+     
 }
 
-const MainReducer = (state, action) => ({
-    theme: ThemeReducer(state.theme, action),
-    user: UserReducer(state.user, action),
-    count: Counter(state.count, action)
+const MainReducer = (state, action) => ({  
+    
+    scroll: ScrollReducer(state.scroll, action)
+    
 });
 
 export const StateContext = createContext();

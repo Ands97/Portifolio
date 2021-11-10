@@ -35,6 +35,9 @@ header{
   width: 195px;
   height: 190px;
 }
+.logo{
+  cursor: pointer;
+}
 nav{
   margin-right: 100px;
 }
@@ -83,6 +86,8 @@ figure{
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor:pointer;
+  position: relative;
 }
 .about{
   display: flex;
@@ -138,6 +143,9 @@ figure{
   color: #48FFE8;
   font-weight: bold;
 }
+.light{
+  color: #000000;
+}
 .box-content{
   margin-right: 90px;
 }
@@ -154,12 +162,12 @@ figure{
   height: auto;
 }
 .site2{
-  width: auto;
-  height: 300px;
+  width: 50vw;
+  height: auto;
 }
 .system1{
-  width: auto;
-  height: 300px;
+  width: 30vw;
+  height: auto;
 }
 .form{
   display: flex;
@@ -192,6 +200,7 @@ figure{
   margin: 10px 10px 10px 250px;
   border-radius: 5px;
   font-family: 'Roboto', sans-serif;
+  cursor: pointer;
 }
 .form h1{
   margin: 10px 10px 10px 100px;
@@ -238,10 +247,23 @@ a{
     height: 25px;
   }
   .about{
-    margin-top: 150px
+    margin-top: 150px;
+    
+  }
+  .about article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .about article main{
+    width: 90%;
   }
   .me{
-    margin-left: 50px
+    width: 65%;
+    height: auto;
+    border-radius: 7px;
+    filter: grayscale(100%);
   }
   .imgProjects{
     width: auto;

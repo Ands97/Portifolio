@@ -5,7 +5,7 @@ export default () => {
     const [state, dispatch] = useStateValue();
 
     return (
-        <div className='buttonNext'>
+        <div onClick={()=>{dispatch({type:'scrollAbout'})}} className='buttonNext'>
             <span>AVANÇAR</span>
             <HiArrowDown/>
         </div>
