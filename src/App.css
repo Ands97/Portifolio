@@ -151,15 +151,39 @@ figure{
 }
 .imgProjects{
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  width: 100%;
+  width: 90%;
   margin: 80px auto auto 35px;
   
 }
-.keyImg{
+a img .keyImg{
   width: 30%;
-  margin: 10px 10px 10px 10px;
+  margin: 10px;
   height: auto;
+}
+.keyImg{
+  width: 90%;
+  margin: 10px;
+  height: auto;
+}
+.imgFile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+.imgFile-stacks{
+  width: 20%;
+}
+.keyImg-stacks-js{
+  width: 100%;
+}
+.keyImg-stacks{
+  width: 60%;
+  height: auto;
+  margin: 10px;
 }
 .site2{
   width: 50vw;

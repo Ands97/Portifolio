@@ -1,4 +1,3 @@
-
 import { useStateValue } from '../contexts/stateContext';
 import { useState } from 'react';
 import Codejs from '../images/codejs.jpg';
@@ -6,11 +5,13 @@ import Me from '../images/me.jpg';
 import ButtonNext from './ButtonNext';
 import Box from './Box';
 import Form from './Form';
-import App1 from '../images/app1.gif';
-import App2 from '../images/app2.png';
-import Site1 from '../images/site1.jpg';
-import Site2 from '../images/site2.jpg';
-import System1 from '../images/system1.png';
+import Calculator from '../images/calculator.gif';
+import Todolist from '../images/Todolist.gif'
+import WppClone from '../images/WppClone.gif';
+import javascriptlogo from '../images/javascriptlogo.png';
+import nodejs from '../images/nodejs.png';
+import reactjs from '../images/reactjs.png';
+import mongodb from '../images/mongodb.png'
 import { FaWhatsapp, FaInstagram, FaGithub } from "react-icons/fa";
 
 
@@ -20,12 +21,21 @@ export default () => {
     const [option2, setOption2] = useState('')
     const [option3, setOption3] = useState('')
     const [option4, setOption4] = useState('')
+    const [showProjects1, setShowProjects1] = useState(true);
+    const [showProjects2, setShowProjects2] = useState(false);
+    const [showProjects3, setShowProjects3] = useState(false);
+    const [showProjects4, setShowProjects4] = useState(false);
+
     const handleSelected1 = ()=>{
         if(option1 === ''){
             setOption1('selected');
             setOption2('');
             setOption3('');
             setOption4('');
+            setShowProjects1(true);
+            setShowProjects2(false);
+            setShowProjects3(false);
+            setShowProjects4(false);
         }
     }
     const handleSelected2 = ()=>{
@@ -34,6 +44,10 @@ export default () => {
             setOption1('');
             setOption3('');
             setOption4('');
+            setShowProjects2(true);
+            setShowProjects1(false);
+            setShowProjects3(false);
+            setShowProjects4(false);
         }
     }
     const handleSelected3 = ()=>{
@@ -42,6 +56,10 @@ export default () => {
             setOption2('');
             setOption1('');
             setOption4('');
+            setShowProjects3(true);
+            setShowProjects2(false);
+            setShowProjects1(false);
+            setShowProjects4(false);
         }
     }
     const handleSelected4 = ()=>{
@@ -50,6 +68,10 @@ export default () => {
             setOption2('');
             setOption3('');
             setOption1('');
+            setShowProjects4(true);
+            setShowProjects2(false);
+            setShowProjects3(false);
+            setShowProjects1(false);
         }
     }
     return (
@@ -101,6 +123,28 @@ export default () => {
                     </main>
                 </article>
             </section>
+            <section>
+
+                <div className='box-content'>
+                    <Box name='STACKS' />
+                </div>
+                <div className='imgProjects'>
+                            <div className='imgFile-stacks'>
+                                <img alt='JS' className='keyImg-stacks-js' src={javascriptlogo}/>
+                            </div>
+                            <div className='imgFile-stacks'>
+                                <img alt='JS' className='keyImg-stacks' src={nodejs}/>
+                            </div>
+                            <div className='imgFile-stacks'>
+                                <img alt='JS' className='keyImg-stacks' src={reactjs}/>
+                            </div>
+                            <div className='imgFile-stacks'>
+                                <img alt='JS' className='keyImg-stacks-js' src={mongodb}/>
+                            </div>     
+                </div>
+
+
+            </section>
             <section className='projects'>
                 <div className='box-content'>
                     <Box name='PROJETOS' />
@@ -111,13 +155,22 @@ export default () => {
                     <p onClick={handleSelected3} className={option3}>WEBSITES</p>
                     <p onClick={handleSelected4} className={option4}>SISTEMAS</p>
                 </article>
-                <div className='imgProjects'>
-                    <img alt='aplicativo 1' className='keyImg' src={App1} />
-                    <img alt='Site 1' className='keyImg' src={Site1} />
-                    <img alt='Aplicativo 2' className='keyImg' src={App2} />
-                    <img alt='Site 2' className='keyImg site2' src={Site2} />
-                    <img alt='Sistema 1' className='keyImg system1' src={System1} />
-                </div>
+                
+                        <div className='imgProjects'>
+                            <div className='imgFile'>
+                                <img alt='WhatsAppClone' className='keyImg' src={WppClone}/>
+                                <span>WhatsApp Clone</span>
+                            </div>
+                            <div className='imgFile'>
+                                <img alt='Calculator' className='keyImg' src={Calculator}/>
+                                <span>Calculadora com Histórico</span>
+                            </div>
+                            <div className='imgFile'>
+                                <img alt='Todolist' className='keyImg' src={Todolist}/>
+                                <span>Todolist</span>
+                            </div>
+                        </div>
+                    
             </section>
             <section className='contactSection'>
 
